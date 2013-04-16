@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/IR_Black.tmTheme",
+	"detect_slow_plugins": false,
+	"font_size": 10,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+	],
+	"theme": "Nil.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
