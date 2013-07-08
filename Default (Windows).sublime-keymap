@@ -1,0 +1,4 @@
+[
+{ "keys": ["alt+l"], "command": "run_macro_file", "args": {"file": "Packages/User/ModuleProcedures.sublime-macro"} },
+{ "keys": ["ctrl+alt+`"], "command": "show_panel", "args": {"panel": "output.exec"} }
+]

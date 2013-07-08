@@ -1,0 +1,12 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"hlsl",
+		"Move Tabs",
+		"Package Control",
+		"Perforce",
+		"SublimeCodeIntel",
+		"Theme - Nil"
+	]
+}
