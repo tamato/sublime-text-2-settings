@@ -1,0 +1,82 @@
+{
+    "folders":
+    [
+        {
+            "path": "./"
+            ,"file_exclude_patterns": ["*.pdf", "*.css", "*.html", "*.build", "*.png", "*.sln", "*.vsscc", "*.vssscc", "*.ncb", "_*"]
+            ,"folder_exclude_patterns": ["Application", "ArtAssets", "Cases", "DocAssets", "ProjectData", "Reports"]
+        }
+        ,{
+            "path": "./Application"
+            ,"folder_exclude_patterns": ["debug", "release", "ProjectSimulation", "webUI"]
+            ,"file_exclude_patterns": ["*.vsscc", "*.vssscc"]
+        }
+        ,{
+            "path": "./Application/ProjectSimulation"
+            ,"folder_exclude_patterns": ["debug", "release"]
+            ,"file_exclude_patterns": ["*.user", "*.vspscc"]
+        }
+        ,{
+            "path": "./Application/webUI"
+        }
+        ,{
+            "path": "./ArtAssets"
+        }
+        ,{
+            "path": "./Cases"
+        }
+        ,{
+            "path": "./DocAssets"
+        }
+        ,{
+            "path": "./ProjectData"
+        }
+        ,{
+            "path": "./Reports"
+        }
+    ],
+
+    "build_systems":
+    [
+        // Cmd Arguments:
+        // 0) batch file location
+        // 1) Name of .sln (not used for engine projects but still required for the batch file)
+        // 2) Engine Path (not used for engine projects but still required for the batch file)
+        // 3) Project root dir
+        // 4) Compile type: build or rebuild
+        // 5) Build type: Debug, Release, or All
+        // 6) Project type: Engine (Optional argument. If not defined(or not the word Engine) the batch file will assume it is a CourseWare project)
+        {
+            "name":"MSC - Build Release"
+            ,"cmd": ["D:/Build_MSC_Proj.bat", "$project_base_name", "D:/TACompass_4", "$project_path", "build", "Release"]
+            ,"working_dir": "$project_path"
+        }
+        ,{
+            "name":"MSC - Build Debug"
+            ,"cmd": ["D:/Build_MSC_Proj.bat", "$project_base_name", "D:/TACompass_4", "$project_path", "build", "Debug"]
+            ,"working_dir": "$project_path"
+        }
+        ,{
+            "name":"MSC - Build All"
+            ,"cmd": ["D:/Build_MSC_Proj.bat", "$project_base_name", "D:/TACompass_4", "$project_path", "build", "All"]
+            ,"working_dir": "$project_path"
+            ,"selector": ["source.c", "source.c++"]
+        }
+        ,{
+            "name":"MSC - Rebuild Release"
+            ,"cmd": ["D:/Build_MSC_Proj.bat","$project_base_name", "D:/TACompass_4", "$project_path", "rebuild", "Release"]
+            ,"working_dir": "$project_path"
+        }
+        ,{
+            "name":"MSC - Rebuild Debug"
+            ,"cmd": ["D:/Build_MSC_Proj.bat","$project_base_name", "D:/TACompass_4", "$project_path", "rebuild", "Debug"]
+            ,"working_dir": "$project_path"
+        }
+        ,{
+            "name":"MSC - Rebuild All"
+            ,"cmd": ["D:/Build_MSC_Proj.bat","$project_base_name", "D:/TACompass_4", "$project_path", "rebuild", "All"]
+            ,"working_dir": "$project_path"
+        }
+
+    ]
+}
